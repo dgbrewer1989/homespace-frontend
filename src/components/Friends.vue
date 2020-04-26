@@ -1,11 +1,11 @@
 <template>
-    <div id="mainPage">
-      <Topbar />
-      <md-list>
-          <!-- TODO: hook up -->
-          Will show all friends that are friends with current account here 
-      </md-list>
-    </div>
+  <div id="mainPage">
+    <Topbar />
+    <md-list>
+      <!-- TODO: hook up -->
+      Will show all friends that are friends with current account here 
+    </md-list>
+  </div>
 </template>
 
 <script>

@@ -1,23 +1,30 @@
 <template>
-    <div id="Profile">
-        <Topbar />
-        <md-card>
-            <md-card-media>
-                <img src="../assets/avatar.png" alt="People">
-            </md-card-media>
-            <md-card-header>
-                <md-card-header-text>
-                    <div class="md-title">{{this.profileInfo.user.firstName}} {{this.profileInfo.user.lastName}}</div>
-                    <div class="md-subhead">{{this.profileInfo.user.username}}</div>
-                </md-card-header-text>
-            </md-card-header>
+  <div id="Profile">
+    <Topbar />
+    <md-card>
+      <md-card-media>
+        <img
+          src="../assets/avatar.png"
+          alt="People"
+        >
+      </md-card-media>
+      <md-card-header>
+        <md-card-header-text>
+          <div class="md-title">
+            {{ this.profileInfo.user.firstName }} {{ this.profileInfo.user.lastName }}
+          </div>
+          <div class="md-subhead">
+            {{ this.profileInfo.user.username }}
+          </div>
+        </md-card-header-text>
+      </md-card-header>
 
-            <!-- <md-card-actions>
+      <!-- <md-card-actions>
                 <md-button>Action</md-button>
                 <md-button>Action</md-button>
             </md-card-actions> -->
-        </md-card>
-    </div>
+    </md-card>
+  </div>
 </template>
 
 // TODO: there is a console warning on this page that needs fixed
@@ -42,9 +49,11 @@ export default {
             required: true,
         },
         profileInfo: {
+            default: "",
             type: String,
         },
         error: {
+            default: "",
             type: String,
         },
         

@@ -1,8 +1,8 @@
 <template>
   <div id="mainPage">
-      <Topbar />
-      <Content />
-      <LoginPage />
+    <Topbar />
+    <Content />
+    <LoginPage />
   </div>
 </template>
 
