@@ -1,13 +1,11 @@
 <template>
   <div id="mainPage">
-    <Topbar />
     <md-list>
       <md-list-item
         v-for="(friend, id) of friends"
         :key="id"
         @click="viewProfile(friend.user.username)"
       >
-        <!-- <router-link :to="{ name: 'Profile', params: { username: friend.user.username }}"> -->
         <md-avatar>
           <img
             src="../assets/avatar.png"
@@ -15,20 +13,15 @@
           >
         </md-avatar>
         <span class="md-list-item-text">{{ friend.user.firstName }} {{ friend.user.lastName }}</span>
-        <!-- </router-link> -->
       </md-list-item>
     </md-list>
   </div>
 </template>
 
 <script>
-import Topbar from '@/components/Topbar'
 import axios from 'axios'
 export default {
     name: 'AllFriends',
-    components: {
-        Topbar
-    },
     data() {
         return {
             friends: []

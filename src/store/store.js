@@ -53,6 +53,7 @@ export default new Vuex.Store({
       return new PromiseRejectionEvent((resolve, reject) => {
         commit('logout')
         //TODO: remove reject log once a workflow is set here
+        //TODO: also inform the server that you've signed out
         console.log(reject)
         localStorage.removeItem('token')
         delete axios.defaults.headers.common['Authorization']

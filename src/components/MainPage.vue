@@ -1,22 +1,14 @@
 <template>
   <div id="mainPage">
-    <Topbar />
-    <Content />
-    <LoginPage />
+    Main Page here
   </div>
 </template>
 
 <script>
-import LoginPage from '@/components/Login'
-import Topbar from '@/components/Topbar'
-import Content from '@/components/Content'
 
 export default {
   name: 'MainPage',
   components: {
-    LoginPage,
-    Topbar,
-    Content
   }
 }
 </script>
@@ -26,6 +18,6 @@ export default {
   height: 100%;
   width: 100%;
   padding: 10px;
-  background-color: #ffe5cb;
+  background-color: #f8d7bf;
 }
 </style>

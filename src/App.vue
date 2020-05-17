@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <router-view />
+    <md-app>
+      <md-app-toolbar>
+        <Topbar />
+      </md-app-toolbar>
+      <md-app-content>
+        <router-view />
+      </md-app-content>
+    </md-app>
   </div>
 </template>
 
 <script>
-
+import Topbar from '@/components/Topbar'
 export default {
   name: 'App',
+  components: {
+    Topbar,
+  }
 }
 </script>
 
@@ -24,6 +34,6 @@ html,body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color:white;
+  background-color:#ffe5cb;
 }
 </style>

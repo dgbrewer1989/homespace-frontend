@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainPage from '../components/MainPage'
 import AllFriends from '../components/AllFriends'
-import Friends from '../components/Friends'
 import Profile from '../components/Profile'
+import Login from '../components/Login'
 
 Vue.use(VueRouter)
 
@@ -19,22 +19,24 @@ Vue.use(VueRouter)
     component: AllFriends
   },
   {
-    path: '/friends',
-    name: 'Friends',
-    component: Friends
-  },
-  {
-    path: '/profile',
+    path: '/:username',
     name: 'Profile',
-    component: Profile
+    component: Profile,
+    props: true
   },
   {
     path: '/signOut',
     name: 'Signout',
     component: Profile
+  },
+  //TODO: ^ fix that. Shouldn't be pointed to profile
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   }
 
-  //TODO: this all needs fixed. Needs logout, unauthorized setup for Friends, and probably more routes that were lost.
+  //TODO: this all needs fixed. Needs logout and probably more routes that were lost.
   
   
   // {
