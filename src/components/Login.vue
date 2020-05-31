@@ -2,10 +2,10 @@
   <div id="login">
     <form
       novalidate
-      class="md-layout"
+      class=""
       @submit.prevent="login"
     >
-      <md-card class="md-layout-item md-size-50 md-small-size-50">
+      <md-card class="md-layout-item md-xlarge-size-20 md-large-size-20 md-medium-size-33 md-small-size-50 md-xsmall-size-100">
         <md-card-header>
           <div class="md-title">
             Sign in
@@ -13,7 +13,7 @@
         </md-card-header>
         <md-card-content>
           <div class="md-layout md-gutter">
-            <div class="md-layout-item md-small-size-80">
+            <div class="md-layout-item">
               <md-field class="username">
                 <label for="login-user-name">Username</label>
                 <md-input
@@ -28,7 +28,7 @@
                 <!-- if more fields are required, add them here -->
               </md-field>
             </div>
-            <div class="md-layout-item md-small-size-30">
+            <div class="md-layout-item">
               <md-field class="password">
                 <label for="login-password">Password</label>
                 <md-input
@@ -101,7 +101,7 @@ export default {
             let username = this.username
             let password = this.password
             this.$store.dispatch('login', {username, password})
-            .then(() => this.$router.push('#'))
+            .then(() => this.$router.push('/'))
             .catch(err => console.log(err))
         },
         createAccount() {
@@ -113,6 +113,5 @@ export default {
 
 <style>
 #login {
-    width: 100%;
 }
 </style>

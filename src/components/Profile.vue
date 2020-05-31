@@ -7,7 +7,10 @@
       <div v-if="loading">
         Loading...
       </div>
-      <div v-else>
+      <div
+        v-else
+        class="ProfileCard"
+      >
         <md-card>
           <md-card-media>
             <img
@@ -95,4 +98,9 @@ export default {
     display: inline-block;
     vertical-align: top;
   }
+#Profile {
+   background-color:#E6E6FA;
+   display: flex;
+   justify-content: flex-start;
+}
 </style>

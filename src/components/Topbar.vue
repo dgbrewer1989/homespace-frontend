@@ -6,7 +6,6 @@
     <router-link :to="{ name: 'AllFriends' }">
       All Friend list
     </router-link>
-    <!-- TODO: Optional if signed in. if not signed in, give "sign in" -->
     <section v-if="isLoggedIn()">
       <a
         href=""

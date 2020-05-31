@@ -59,6 +59,18 @@ export default new Vuex.Store({
         delete axios.defaults.headers.common['Authorization']
         resolve()
       })
+    },
+    createUser({commit}, userDetails) {
+      return new Promise((resolve, reject) => {
+        axios.post("http://localhost:8081/users", userDetails)
+          .then(resp => {
+            resolve(resp)
+          })
+          .catch(function (error) {
+            commit('create_account_error')
+            reject(error)
+          })
+      })
     }
   },
   getters : {
