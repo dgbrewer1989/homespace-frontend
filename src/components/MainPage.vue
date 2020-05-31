@@ -1,14 +1,26 @@
 <template>
   <div id="mainPage">
     Main Page here
+    <section v-if="!isLoggedIn()">
+      <Login />
+    </section> 
+    <section v-else>
+      Signed in
+    </section>
   </div>
 </template>
 
 <script>
-
+import Login from '@/components/Login'
 export default {
   name: 'MainPage',
   components: {
+    Login
+  },
+  methods: {
+    isLoggedIn() {
+          return this.$store.getters.isLoggedIn;
+        }
   }
 }
 </script>

@@ -1,17 +1,17 @@
 <template>
   <div id="Content">
-    <div id="loginPage">
-      <LoginPage />
+    <div id="login">
+      <Login />
     </div>
   </div>    
 </template>
 
 <script>
-import LoginPage from '@/components/Login'
+import Login from '@/components/Login'
 export default {
     name: 'Content',
     components: {
-      LoginPage
+      Login
     }
 }
 </script>
@@ -22,6 +22,6 @@ export default {
   background-color:blue;
   border: solid 1rem red;
 }
-#loginPage {
+#login {
 }
 </style>
