@@ -78,5 +78,3 @@ export default new Vuex.Store({
     authState: state => state.status,
   }
 })
-
-//https://scotch.io/tutorials/handling-authentication-in-vue-using-vuex
